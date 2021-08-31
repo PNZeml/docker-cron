@@ -14,9 +14,9 @@ docker run --name cron-jobs \
 	-e DB_PORT=port \
 	-e DB_USERNAME=uaser \
 	-e DB_DATABASENAME=dbname \
-    -e RUN_PG_BACKUP_CRON_EXP="0 12 * * *"
-    -e BACKUP_DIR="/etc/aispwd-bak"
+	-e RUN_PG_BACKUP_CRON_EXP="0 12 * * *"
+	-e BACKUP_DIR="/etc/aispwd-bak"
 	-v $PWD/backups:/etc/aispwd-bak \
-    -v $PWD/secrets:/root/ \
+	-v $PWD/secrets:/root/ \
 	cron-jobs:latest
 ```
